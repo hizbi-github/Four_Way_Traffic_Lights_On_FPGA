@@ -16,14 +16,16 @@
 
 # Introduction
 
-The problem given was to make a 4-Way traffic light system meant for a 4-Way intersection. This
-was successfully tackled. All the given requirements were met. The project was implemented in Verilog for
+This project aims to make a 4-Way traffic light system meant for a 4-Way intersection. The project was implemented in Verilog for
 Nexys-2 FPGA Dev Kit.
+
 There are four sets of traffic lights, one per each road. Each of these sets have three lights each;
 namely Red, Yellow and Green. These three lights turn ON/OFF based on fixed intervals, unlike the real-
 world solution in which sensors are used to measure vehicle traffic on the road networks which then provide
 information for toggling the traffic lights respectively. All of these lights in this project are represented by
-LEDs of respective colors. In Verilog code, these LEDs or traffic lights are modelled using four arrays for
+LEDs of respective colors. 
+
+In Verilog code, these LEDs or traffic lights are modelled using four arrays for
 four sets of traffic lights. A Finite-State-Machines is then used to cycle through all of the traffic lights and
 loop back. A clock divider module programmed in Verilog is also used to reduce the internal clock on the
 Nexys-2 FPGA from 50MHz to 1Hz. This provides accurate unit second timings for toggling the traffic
@@ -93,8 +95,8 @@ summarized as below:
 
 The sub FSM for traffic lights of each road is as follows:
 
-1. First State >> Red light switched ON. others OFF
-2. Second State >> Green light switched ON. others OFF
+1. First State >> Red light switched ON, others OFF
+2. Second State >> Green light switched ON, others OFF
 3. Third State >> Yellow light switched ON, others OFF
 
 The actual delay between the traffic lights of each road was achieved by using counters. By giving
