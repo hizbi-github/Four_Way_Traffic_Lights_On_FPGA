@@ -6,12 +6,13 @@
 1. Introduction
 2. Functional Requirements
 3. Optional Feature
-4. Parts of Verilog Code
-5. Verilog Simulation Results
-6. State Diagram
-7. Circuit Diagram
-8. Further Improvements
-9. Conclusion
+4. Verilog Code Explained
+5. Traffic Lights System Animation
+6. Simulation Results
+7. State Diagram
+8. Wiring and Circuit Diagram
+9. Further Improvements
+
 
 # Introduction
 
@@ -28,9 +29,10 @@ loop back. A clock divider module programmed in Verilog is also used to reduce t
 Nexys-2 FPGA from 50MHz to 1Hz. This provides accurate unit second timings for toggling the traffic
 lights just like in real world.
 
+
 # Functional Requirements
 
-All of the given functional requirements were met successfully as below:
+Functional requirements were met successfully:
 
 1. Fully functional Verilog code synthesizable on the Nexys-2 FPGA.
 
@@ -48,6 +50,7 @@ voltage (3.3V) for powering all 12 the traffic lights.
     2. Yellow
     3. Red
 
+
 # Optional Feature
 
 One optional feature which was implemented is Pedestrian Lights. These pedestrian lights turn ON/OFF
@@ -61,7 +64,8 @@ automatically based on which road’s traffic lights are cycled through at that 
 After the Road 4’s turn, the entire process is repeated again during which the pedestrian lights also
 toggle ON/OFF according to which Road’s traffic light is Green.
 
-# Parts of Verilog Code
+
+# Verilog Code Explained
 
 The Verilog code used followed behavioral modelling. Main parts of the Verilog code are
 summarized as below:
@@ -99,21 +103,88 @@ it has reached that limit and while doing so, the state machine will loop throug
 it loops, it will provide a delay of unit second. Thus counting 4 times will give us 4 seconds and so on. The
 clock divider module which converts the 50MHz clock to 1Hz is also based on the same principle.
 
-# Verilog Simulation Result
 
-* (From 0 to 12 seconds)
-* (From 12 to 24 seconds)
-* (From 24 to 36 seconds)
+# Traffic Lights System Animation
 
-# State Diagram
 
-# Circuit Diagram
+<p align="center">
+  Animation GIF
+</p>
+
+<p align="center">
+  <img src="Animations\Four_Way_Traffic_Lights Animation.gif" />
+</p>
+
+
+# Simulation Result
+
+
+<p align="center">
+  (From 0 to 12 seconds)
+</p>
+
+<p align="center">
+  <img src="Simulation Images\0 to 12 Seconds.png" />
+</p>
+
+
+<p align="center">
+  (From 12 to 24 seconds)
+</p>
+
+<p align="center">
+  <img src="Simulation Images\12 to 24 Seconds.png" />
+</p>
+
+
+<p align="center">
+  (From 24 to 36 seconds)
+</p>
+
+<p align="center">
+  <img src="Simulation Images\24 to 36 Seconds.png" />
+</p>
+
+
+# State Diagrams
+
+
+<p align="center">
+  Main FSM
+</p>
+
+<p align="center">
+  <img src="State Diagrams\Main FSM.png" />
+</p>
+
+
+<p align="center">
+  Sub FSM
+</p>
+
+<p align="center">
+  <img src="State Diagrams\Sub FSM.png" />
+</p>
+
+
+# Wiring and Circuit Diagram
+
+
+<p align="center">
+  Wiring & Circuit Diagram
+</p>
+
+<p align="center">
+  <img src="Wiring and Circuit Diagram\Wiring and Circuit Diagram Image.png" />
+</p>
+
 
 The mapping of traffic light LEDs is shown in the circuit diagram. The Pmod connecters on the Nexy-2
 FPGA were used for this purpose. The respective pins which connecting to each LED of each traffic light set
 is are also mentioned. For protection, the LED are connected via resistors to limit the excess current. The
 output voltage received from each pin of Pmod connector is 3.3 Volts. The LEDs turn ON or OFF when a
 value of one or zero is assigned to a Pmod pin, respectively.
+
 
 # Further Improvement
 
@@ -122,15 +193,8 @@ system. This 7-Segment display would show the remaining counter time between eac
 lights and inform the drivers when the given light will turn Yellow or Green, etc. This feature can be easily
 added in the future which will further improve the overall design and quality of the traffic light system.
 
-# Conclusion
 
-This project truly tested my capabilities when it comes to DLD base knowledge, Verilog know-how, and
-project management skills. Many new concepts were introduced to me on the way as a result of working on
-this project. I learnt about proper pin mapping and different types of connectors that can be used on this
-specific Nexys-2 FPGA. I also learnt about very crucial Verilog concepts of which the most important one
-was the fact that hardware programming approach is very different than regular software programming
-approaches.
-Overall, this project came out to be quite successful as the intended goals were perfectly achieved while
-also successfully implementing an extra feature.
 
-_________________
+<p align="center">
+  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+</p>
