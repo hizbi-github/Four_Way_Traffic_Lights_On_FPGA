@@ -1,0 +1,22 @@
+
+
+NET "clk" LOC = B8;
+NET "TL_1[2]" LOC = L15;
+NET "TL_1[1]" LOC = K12;
+NET "TL_1[0]" LOC = L17;
+NET "TL_2[2]" LOC = M13;
+NET "TL_2[1]" LOC = R18;
+NET "TL_2[0]" LOC = R15;
+NET "TL_3[2]" LOC = G15;
+NET "TL_3[1]" LOC = J16;
+NET "TL_3[0]" LOC = G13;
+NET "TL_4[2]" LOC = J13;
+NET "TL_4[1]" LOC = M18;
+NET "TL_4[0]" LOC = N18;
+NET "PED_1" LOC = M15;
+NET "PED_2" LOC = T17;
+NET "PED_3" LOC = H16;
+
+# PlanAhead Generated physical constraints 
+
+NET "PED_4" LOC = P18;
